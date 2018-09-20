@@ -1,0 +1,16 @@
+{
+  "name": "jupyter-react-poc",
+  "version": "1.0.0",
+  "description": "Let's link jupyter and react!",
+  "main": "index.js",
+  "author": "fabien@contiamo.com",
+  "license": "MIT",
+  "dependencies": {
+    "mdx-deck": "^1.7.3",
+    "mdx-deck-code-surfer": "^0.4.1",
+    "raw-loader": "^0.5.1"
+  },
+  "scripts": {
+    "start": "mdx-deck index.mdx"
+  }
+}

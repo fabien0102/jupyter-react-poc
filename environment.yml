@@ -1,0 +1,9 @@
+name: react-notebook
+channels:
+  - conda-forge
+dependencies:
+  - python=3
+  - jupyter
+  - pip
+  - pip:
+    - ipywidgets==7

@@ -1,0 +1,100 @@
+export { notes as theme } from "mdx-deck/themes"
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+![logo](./assets/python-react.svg)
+# Jupyter & React
+
+---
+
+# A crazy idea
+
+- Jupyter and Python are great for data-science
+- React is great for interactive data-visualization
+
+## Let's merge everything!
+
+---
+
+# Different challenges
+
+- How can we communicate between Python & React?
+- Jupyter widgets are in BackboneJS, but I want React!
+- We don't have CommonJS import
+
+```js
+import React from "react" // not possible
+```
+
+---
+
+# Let's go!
+
+<iframe src="https://giphy.com/embed/oDOnRIDjxlCzC" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+---
+
+<CodeSurfer
+  title="Python widget interface"
+  code={require("!raw-loader!./cells/cell01.py")}
+  lang="python"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { range: [1, 2], notes: "Import the jupyther widget lib" },
+    { lines: [4], notes: "The name of my widget" },
+    { range: [5, 7], notes: "All information about my javascript widget" },
+    { range: [8, 11], notes: "The `value` variable share between the Python and the JavaScript" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Importing react"
+  code={require("!raw-loader!./cells/cell02.py")}
+  lang="python"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Tell to jupyter that this cell is in JavaScript" },
+    { range: [3, 8], notes: "Import react and react-dom for later" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="The fun part!"
+  code={require("!raw-loader!./cells/cell03.js")}
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { range: [1, 2], notes: "Define my module (same name as declared in the Python interface)" },
+    { range: [3, 6], notes: "Import my dependencies" },
+    { range: [7, 8], notes: "Just a helper, because I'm lazy :)" },
+    { lines: [10, 11, 49, 51, 52, 53, 54], notes: "My backbone component" },
+    { lines: [12], notes: "Let's put all our logic in the `initialize` backbone method" },
+    { lines: [13], notes: "Just to have access to backbone for later" },
+    { range: [15, 42], notes: "A simple React component" },
+    { range: [18, 20], notes: "Add the `value` to the react state" },
+    { range: [23, 33], notes: "Update the react state on each backbone model change" },
+    { range: [35, 41], notes: "Render a beautiful title!" },
+    { range: [43, 47], notes: "Let's attach my react component to the backbone view" }
+  ]}
+/>
+
+---
+
+# Let's try on Jupyter!
+
+---
+
+# Next steps
+
+- Import @operational/visualization
+- Export all this mess in a proper standalone widget (npm package)
+- Create amazing visualization!
+
+---
+
+# 🤔 Questions?
