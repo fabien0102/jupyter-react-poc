@@ -11,6 +11,11 @@
     "raw-loader": "^0.5.1"
   },
   "scripts": {
-    "start": "mdx-deck index.mdx"
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "deploy": "yarn build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
   }
 }
