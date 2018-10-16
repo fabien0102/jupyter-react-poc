@@ -10,4 +10,4 @@ You can run the notebook directly on [Binder](https://mybinder.org/v2/gh/fabien0
 
 ## Run the presentation
 
-Just go here -> {github page}
+https://fabien0102.github.io/jupyter-react-poc
