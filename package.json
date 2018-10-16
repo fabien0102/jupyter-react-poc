@@ -6,13 +6,13 @@
   "author": "fabien@contiamo.com",
   "license": "MIT",
   "dependencies": {
-    "mdx-deck": "^1.7.3",
-    "mdx-deck-code-surfer": "^0.4.1",
+    "mdx-deck": "^1.7.7",
+    "mdx-deck-code-surfer": "^0.5.3",
     "raw-loader": "^0.5.1"
   },
   "scripts": {
     "start": "mdx-deck index.mdx",
-    "build": "mdx-deck build index.mdx",
+    "build": "mdx-deck build --no-html index.mdx && cp -r assets dist/assets",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "devDependencies": {
